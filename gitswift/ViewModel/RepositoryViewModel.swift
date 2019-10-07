@@ -23,6 +23,8 @@ class RepositoryViewModel: NSObject {
     private var request = GitHubService()
     private(set) var isLoading: Bool = false
     
+    // MARK: - Public Properties
+    
      var repository: [Repository] = [] {
         didSet {
             self.didCompleteFetch?()

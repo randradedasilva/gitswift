@@ -23,7 +23,7 @@ class RepositoryTableViewCell: UITableViewCell, Reusable, CodeView {
         fatalError("init: coder has not been implemented")
     }
     
-    // MARK: - Private Properties
+    // MARK: - Public Properties
     
      let mainImageView: UIImageView = {
         var mainImage = UIImageView()
