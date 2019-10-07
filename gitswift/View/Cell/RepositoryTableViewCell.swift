@@ -28,6 +28,7 @@ class RepositoryTableViewCell: UITableViewCell, Reusable, CodeView {
      let mainImageView: UIImageView = {
         var mainImage = UIImageView()
         mainImage.translatesAutoresizingMaskIntoConstraints = false
+        mainImage.contentMode = UIView.ContentMode.scaleAspectFit
         return mainImage
         
     }()
@@ -85,8 +86,6 @@ class RepositoryTableViewCell: UITableViewCell, Reusable, CodeView {
         addSubview(mainImageView)
         addSubview(stackView)
         
-        mainImageView.contentMode = UIView.ContentMode.scaleAspectFit
-       
         stackView.addArrangedSubview(nameLabel)
         stackView.addArrangedSubview(ownerLabel)
         stackView.addArrangedSubview(descriptionLabel)
@@ -96,15 +95,15 @@ class RepositoryTableViewCell: UITableViewCell, Reusable, CodeView {
     
     func buildConstraints() {
         
-        mainImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10).isActive = true
+        mainImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 5).isActive = true
         mainImageView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10).isActive = true
-        mainImageView.heightAnchor.constraint(equalTo: self.mainImageView.widthAnchor, constant: -10).isActive = true
-        mainImageView.widthAnchor.constraint(equalToConstant: 90).isActive = true
+        mainImageView.heightAnchor.constraint(equalTo: self.stackView.heightAnchor, constant: 10).isActive = true
+        mainImageView.widthAnchor.constraint(equalToConstant: 80).isActive = true
      
         stackView.leftAnchor.constraint(equalTo: self.mainImageView.rightAnchor, constant: 20).isActive = true
         stackView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10).isActive = true
         stackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 5).isActive = true
-        stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -15).isActive = true
         
     }
     
@@ -122,7 +121,6 @@ class RepositoryTableViewCell: UITableViewCell, Reusable, CodeView {
             
             self.mainImageView.kf.setImage(with: URL(string: posterPath))
             self.mainImageView.kf.indicatorType = .activity
-            self.mainImageView.layoutIfNeeded()
             
         }
     }

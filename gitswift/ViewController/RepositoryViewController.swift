@@ -59,7 +59,7 @@ class RepositoryViewController: UIViewController {
     func setupViewModel() {
         activityIndicatorView.startAnimating()
         viewModel.didCompleteFetch = {
-           self.repositoryTableView.tableView.reloadData()
+            self.reloadDataAsync()
            self.activityIndicatorView.stopAnimating()
         }
         viewModel.fetchRepositories(page: page)
@@ -77,7 +77,7 @@ class RepositoryViewController: UIViewController {
     
     func fetchMore(completion: @escaping () -> Void) {
         viewModel.fetchRepositories(page: page)
-        self.repositoryTableView.tableView.reloadData()
+        reloadDataAsync()
         completion()
         
     }
@@ -86,6 +86,12 @@ class RepositoryViewController: UIViewController {
         self.page = 1
         self.fetchMore {
             self.refreshControl.endRefreshing()
+        }
+    }
+    
+    func reloadDataAsync() {
+        DispatchQueue.main.async {
+            self.repositoryTableView.tableView.reloadData()
         }
     }
 }
