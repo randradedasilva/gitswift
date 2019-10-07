@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='gitswiftTests.xctest' tests='13' failures='1'>
+  <testsuite name='gitswiftTests.RepositorySpecs' tests='2' failures='0'>
+    <testcase classname='gitswiftTests.RepositorySpecs' name='a__Repository___Can_be_created_with_valid_JSON__should_be_able_to_create_a_repository_from_json' time='0.028'/>
+    <testcase classname='gitswiftTests.RepositorySpecs' name='a__Repository___Can_be_created_with_valid_JSON__should_have_a_description' time='0.026'/>
+  </testsuite>
+  <testsuite name='gitswiftTests.RepositoryTableViewCellSpecs' tests='3' failures='0'>
+    <testcase classname='gitswiftTests.RepositoryTableViewCellSpecs' name='a_Repository_Table_Cell___should_not_be_nil' time='0.030'/>
+    <testcase classname='gitswiftTests.RepositoryTableViewCellSpecs' name='a_Repository_Table_Cell___should_have_expected_repo_name_after_setup' time='0.024'/>
+    <testcase classname='gitswiftTests.RepositoryTableViewCellSpecs' name='a_Repository_Table_Cell___should_trigger_fatal_error_if_init_with_coder' time='0.030'/>
+  </testsuite>
+  <testsuite name='gitswiftTests.RepositoryViewControllerSpecs' tests='6' failures='0'>
+    <testcase classname='gitswiftTests.RepositoryViewControllerSpecs' name='a_repository_view_controller__should_be_able_to_create_a_controller' time='0.009'/>
+    <testcase classname='gitswiftTests.RepositoryViewControllerSpecs' name='a_repository_view_controller__should_be_able_to_init_a_tableView' time='0.008'/>
+    <testcase classname='gitswiftTests.RepositoryViewControllerSpecs' name='a_repository_view_controller__should_have_the_expected_navigation_bar' time='0.006'/>
+    <testcase classname='gitswiftTests.RepositoryViewControllerSpecs' name='a_repository_view_controller__should_fetch_more' time='0.007'/>
+    <testcase classname='gitswiftTests.RepositoryViewControllerSpecs' name='a_repository_view_controller__should_reload_data' time='0.007'/>
+    <testcase classname='gitswiftTests.RepositoryViewControllerSpecs' name='a_repository_view_controller__should_trigger_fatal_error_if_init_with_coder' time='0.008'/>
+  </testsuite>
+  <testsuite name='gitswiftTests.RepositoryViewModelTests' tests='2' failures='1'>
+    <testcase classname='gitswiftTests.RepositoryViewModelTests' name='testFetchRepositories' time='2.708'/>
+    <testcase classname='gitswiftTests.RepositoryViewModelTests' name='testRepositoriesCount'>
+      <failure message='Asynchronous wait failed: Exceeded timeout of 10 seconds, with unfulfilled expectations: &quot;testRepositoriesCount()42&quot;.'>&lt;unknown&gt;:0</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

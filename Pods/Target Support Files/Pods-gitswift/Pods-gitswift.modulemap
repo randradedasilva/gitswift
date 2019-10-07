@@ -1,0 +1,6 @@
+framework module Pods_gitswift {
+  umbrella header "Pods-gitswift-umbrella.h"
+
+  export *
+  module * { export * }
+}
