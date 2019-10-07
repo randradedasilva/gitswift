@@ -8,16 +8,16 @@
 
 ## Design Pattern 
 
-* __Model-View-ViewModel (MVVM)__
+* Model-View-ViewModel (MVVM)
 
 ## External libs 
 
-* __Quick__
-* __Nimble__
-* __Alamofire__
-* __CodableAlamofire__
-* __Kingfisher__
-* __Reusable__
+* Quick
+* Nimble
+* Alamofire
+* CodableAlamofire
+* Kingfisher
+* Reusable
 
 
 
@@ -28,6 +28,11 @@
  Fastlane install
     
     sudo gem install fastlane
+    
+ Slather install
+    
+    sudo gem install slather
+    
     
     
 ## Test Coverage
