@@ -69,6 +69,7 @@ class RepositoryViewModel: NSObject {
         
         let cell = tableView.dequeueReusableCell(for: indexPath, cellType: RepositoryTableViewCell.self)
         cell.configure(with: getRepositoryCell(at: indexPath))
+        cell.layoutIfNeeded()
         cell.selectionStyle = .none
         return cell
     

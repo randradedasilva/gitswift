@@ -50,7 +50,8 @@ class RepositoryViewController: UIViewController {
         activityIndicatorView.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: repositoryTableView.tableView.bounds.width, height: CGFloat(44))
         self.repositoryTableView.tableView.tableFooterView = self.activityIndicatorView
         self.repositoryTableView.tableView.register(cellType: RepositoryTableViewCell.self)
-        self.repositoryTableView.tableView.rowHeight = UITableView.automaticDimension
+        self.repositoryTableView.tableView.estimatedRowHeight = UITableView.automaticDimension
+        self.repositoryTableView.tableView.rowHeight = 160
         self.repositoryTableView.tableView.delegate = self
         self.repositoryTableView.tableView.dataSource = self
         
